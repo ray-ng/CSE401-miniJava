@@ -149,7 +149,7 @@ public class PrettyPrintVisitor implements Visitor {
   }
 
   public void visit(IntArrayType n) {
-    System.out.print("int []");
+    System.out.print("int[]");
   }
 
   public void visit(BooleanType n) {
@@ -356,7 +356,7 @@ public class PrettyPrintVisitor implements Visitor {
   }
 
   public void visit(StringArrayType n) {
-    System.out.print("String []");
+    System.out.print("String[]");
   }
 
   public void visit(StatementList sl) {

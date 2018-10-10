@@ -86,7 +86,7 @@
   <target name="test-parser" depends="compile">
     <java classname="TestParser" classpath="build/classes;lib/java-cup-11b.jar"
           fork="true"
-          input="SamplePrograms/SampleMiniJavaPrograms/BinaryTree.java">
+          input="SamplePrograms/SampleMiniJavaPrograms/BinarySearch.java">
       <assertions> <enable/> </assertions>
     </java>
   </target>

@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a8b8ca18-ba06-41ad-9487-61f51758abb1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/SamplePrograms/SampleMiniJavaPrograms/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/SamplePrograms/SampleMiniJavaPrograms/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/VarDecl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/VarDecl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AST/Visitor/PrettyPrintVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/Visitor/PrettyPrintVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/minijava.cup.copy" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/minijava.cup.copy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,23 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BinaryTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SamplePrograms/SampleMiniJavaPrograms/BinaryTree.java">
+      <file leaf-file-name="TestParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TestParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-              <folding>
-                <element signature="e#1435#1436#0" expanded="true" />
-                <element signature="e#1457#1458#0" expanded="true" />
-                <element signature="e#1485#1486#0" expanded="true" />
-                <element signature="e#1505#1506#0" expanded="true" />
-                <element signature="e#1531#1532#0" expanded="true" />
-                <element signature="e#1551#1552#0" expanded="true" />
-                <element signature="e#1662#1663#0" expanded="true" />
-                <element signature="e#1688#1689#0" expanded="true" />
-                <element signature="e#1723#1724#0" expanded="true" />
-                <element signature="e#1748#1749#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="480">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinarySearch.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SamplePrograms/SampleMiniJavaPrograms/BinarySearch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="50" column="12" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -41,38 +37,17 @@
       <file leaf-file-name="PrettyPrintVisitor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AST/Visitor/PrettyPrintVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="96" column="24" lean-forward="true" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+            <state relative-caret-position="389">
+              <caret line="358" column="28" lean-forward="true" selection-start-line="358" selection-start-column="28" selection-end-line="358" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VarDecl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AST/VarDecl.java">
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StatementList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AST/StatementList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="26" column="4" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="26" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TestParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="497">
+              <caret line="88" column="72" selection-start-line="88" selection-start-column="72" selection-end-line="88" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -128,7 +103,6 @@
         <option value="$PROJECT_DIR$/src/AST/Display.java" />
         <option value="$PROJECT_DIR$/SamplePrograms/Example.java" />
         <option value="$PROJECT_DIR$/src/AST/Visitor/Visitor.java" />
-        <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/AST/ASTNode.java" />
         <option value="$PROJECT_DIR$/src/AST/StatementList.java" />
         <option value="$PROJECT_DIR$/src/AST/MethodDeclList.java" />
@@ -140,8 +114,9 @@
         <option value="$PROJECT_DIR$/src/AST/MethodDecl.java" />
         <option value="$PROJECT_DIR$/src/AST/ClassDeclList.java" />
         <option value="$PROJECT_DIR$/src/AST/MainClass.java" />
-        <option value="$PROJECT_DIR$/SamplePrograms/SampleMiniJavaPrograms/BinaryTree.java" />
         <option value="$PROJECT_DIR$/src/AST/VarDecl.java" />
+        <option value="$PROJECT_DIR$/SamplePrograms/SampleMiniJavaPrograms/BinaryTree.java" />
+        <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/AST/Visitor/PrettyPrintVisitor.java" />
       </list>
     </option>
@@ -152,9 +127,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="8" />
-    <option name="width" value="720" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectView">
@@ -291,12 +265,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537083264409</updated>
-      <workItem from="1537083273130" duration="45934000" />
+      <workItem from="1537083273130" duration="46430000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45934000" />
+    <option name="totallyTimeSpent" value="46430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -372,13 +346,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AST/While.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AST/Print.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -580,13 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="88" column="70" selection-start-line="88" selection-start-column="70" selection-end-line="88" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AST/ArrayAssign.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -714,18 +674,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SamplePrograms/SampleMiniJavaPrograms/BinaryTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        <state relative-caret-position="30">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
           <folding>
+            <element signature="e#58#59#0" expanded="true" />
+            <element signature="e#101#102#0" expanded="true" />
             <element signature="e#1435#1436#0" expanded="true" />
             <element signature="e#1457#1458#0" expanded="true" />
             <element signature="e#1485#1486#0" expanded="true" />
@@ -740,6 +695,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AST/VarDecl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AST/StatementList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -750,17 +712,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AST/VarDecl.java">
+    <entry file="file://$PROJECT_DIR$/src/TestParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        <state relative-caret-position="480">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="88" column="72" selection-start-line="88" selection-start-column="72" selection-end-line="88" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SamplePrograms/SampleMiniJavaPrograms/BinarySearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="50" column="12" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AST/Visitor/PrettyPrintVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="96" column="24" lean-forward="true" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+        <state relative-caret-position="389">
+          <caret line="358" column="28" lean-forward="true" selection-start-line="358" selection-start-column="28" selection-end-line="358" selection-end-column="28" />
         </state>
       </provider>
     </entry>
