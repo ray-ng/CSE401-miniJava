@@ -14,6 +14,14 @@ public class VarDecl extends Statement {
     t=at; il=ai;
   }
 
+  public Identifier get(int i)  {
+    return il.get(i);
+  }
+
+  public int size() {
+    return il.size();
+  }
+
   public void accept(Visitor v) {
     v.visit(this);
   }

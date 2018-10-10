@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8b8ca18-ba06-41ad-9487-61f51758abb1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/SamplePrograms/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/SamplePrograms/Example.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SamplePrograms/SampleMiniJavaPrograms/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/SamplePrograms/SampleMiniJavaPrograms/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/ASTNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/ASTNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/ClassDeclList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/ClassDeclList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/Display.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/ExpList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/ExpList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/FormalList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/FormalList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/IntegerLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/IntegerLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/MethodDecl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/MethodDecl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/MethodDeclList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/MethodDeclList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/StatementList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/StatementList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AST/VarDecl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/VarDecl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/VarDeclList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/VarDeclList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AST/Visitor/PrettyPrintVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/Visitor/PrettyPrintVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/Visitor/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/Visitor/Visitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/minijava.cup" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/minijava.cup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scanner/minijava.jflex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scanner/minijava.jflex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/minijava.cup.copy" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/minijava.cup.copy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +20,8 @@
       <file leaf-file-name="BinaryTree.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SamplePrograms/SampleMiniJavaPrograms/BinaryTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+            <state relative-caret-position="210">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
               <folding>
                 <element signature="e#1435#1436#0" expanded="true" />
                 <element signature="e#1457#1458#0" expanded="true" />
@@ -57,56 +41,29 @@
       <file leaf-file-name="PrettyPrintVisitor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AST/Visitor/PrettyPrintVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3917">
-              <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+            <state relative-caret-position="330">
+              <caret line="96" column="24" lean-forward="true" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassDeclSimple.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AST/ClassDeclSimple.java">
+      <file leaf-file-name="VarDecl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AST/VarDecl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="28" />
+            <state relative-caret-position="195">
+              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MethodDecl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AST/MethodDecl.java">
+      <file leaf-file-name="StatementList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AST/StatementList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VarDeclList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AST/VarDeclList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="300">
+              <caret line="26" column="4" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="26" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AST/MainClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestScanner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TestScanner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -156,6 +113,7 @@
       <find>(vardecl</find>
       <find>VarDeclList</find>
       <find>(class</find>
+      <find>(VarDecl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -180,10 +138,10 @@
         <option value="$PROJECT_DIR$/src/AST/VarDeclList.java" />
         <option value="$PROJECT_DIR$/src/TestParser.java" />
         <option value="$PROJECT_DIR$/src/AST/MethodDecl.java" />
-        <option value="$PROJECT_DIR$/src/AST/VarDecl.java" />
         <option value="$PROJECT_DIR$/src/AST/ClassDeclList.java" />
         <option value="$PROJECT_DIR$/src/AST/MainClass.java" />
         <option value="$PROJECT_DIR$/SamplePrograms/SampleMiniJavaPrograms/BinaryTree.java" />
+        <option value="$PROJECT_DIR$/src/AST/VarDecl.java" />
         <option value="$PROJECT_DIR$/src/AST/Visitor/PrettyPrintVisitor.java" />
       </list>
     </option>
@@ -333,12 +291,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537083264409</updated>
-      <workItem from="1537083273130" duration="44969000" />
+      <workItem from="1537083273130" duration="45934000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44969000" />
+    <option name="totallyTimeSpent" value="45934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -701,13 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AST/VarDecl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AST/ClassDeclList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -725,27 +676,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TestScanner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AST/StatementList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -773,10 +707,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AST/ClassDeclSimple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SamplePrograms/SampleMiniJavaPrograms/BinaryTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+        <state relative-caret-position="210">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
             <element signature="e#1435#1436#0" expanded="true" />
             <element signature="e#1457#1458#0" expanded="true" />
@@ -792,17 +740,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AST/ClassDeclSimple.java">
+    <entry file="file://$PROJECT_DIR$/src/AST/StatementList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="28" />
+        <state relative-caret-position="300">
+          <caret line="26" column="4" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="26" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AST/VarDecl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AST/Visitor/PrettyPrintVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3917">
-          <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        <state relative-caret-position="330">
+          <caret line="96" column="24" lean-forward="true" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
         </state>
       </provider>
     </entry>

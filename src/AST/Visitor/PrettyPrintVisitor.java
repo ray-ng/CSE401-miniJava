@@ -93,8 +93,11 @@ public class PrettyPrintVisitor implements Visitor {
   public void visit(VarDecl n) {
     n.t.accept(this);
     System.out.print(" ");
-    for (Identifier i: n.il) {
-        i.accept(this);
+    n.get(0).accept(this);
+    int size = n.size();
+    for (int i = 1; i < size; ++i) {
+      System.out.print(", ");
+        n.get(i).accept(this);
     }
 //    n.il.accept(this);
     System.out.print(";");
