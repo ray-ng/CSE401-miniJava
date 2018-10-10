@@ -9,64 +9,199 @@ package Parser;
 
 import AST.*;
 import java.util.*;
+import java.io.*;
 import java_cup.runtime.*;
 
 /* Terminals (lexical tokens returned by the scanner): */
 
 /* reserved words */
-terminal DISPLAY;
+terminal CLASS, PUBLIC, STATIC, VOID, MAIN, EXTENDS, RETURN, INT, BOOLEAN, STRING, 
+         IF, WHILE, ELSE, SYSTEMOUTPRINTLN, LENGTH, TRUE, FALSE, THIS, NEW;
 
 /* operators */
-terminal PLUS, BECOMES;
+terminal PLUS, MINUS, TIMES, DIVIDE, EQUAL, BECOMES, LESSTHAN, INSTANCEOF, AND, NOT, DOT;
 
 /* delimiters */
-terminal LPAREN, RPAREN, SEMICOLON;
+terminal LPAREN, RPAREN, LSQBR, RSQBR, LCURBR, RCURBR, COMMA, SEMICOLON;
 
 /* identifiers */
-terminal String IDENTIFIER;
+terminal String IDENTIFIER, STRINGCONST;
 
+/* integer numbers */
+terminal Integer INTEGERCONST;
 
 /* Nonterminals (constructed by parser): */
 
-nonterminal List<Statement> Program;
-nonterminal Statement Statement;
+nonterminal Program Program;
 nonterminal Assign AssignStatement;
-nonterminal Display DisplayStatement;
+nonterminal Type Type;
+nonterminal LinkedList<Identifier> IdentifierList;
+nonterminal VarDecl VarDeclaration;
+nonterminal VarDeclList VarDeclarationList;
+nonterminal Statement Statement;
+nonterminal StatementList StatementList;
 nonterminal Exp Expression;
+nonterminal ExpList ExpressionList;
+nonterminal MethodDecl MethodDeclaration;
+nonterminal MethodDeclList MethodDeclarationList;
+nonterminal Formal Formal;
+nonterminal FormalList FormalList;
+nonterminal ClassDecl ClassDeclaration;
+nonterminal ClassDeclList ClassDeclarationList;
 nonterminal Identifier Identifier;
-
+nonterminal MainClass MainClass;
 
 /* Precedence declarations: */
 
-precedence left PLUS;
-
+precedence right BECOMES;
+precedence left AND;
+precedence left EQUAL;
+precedence left LESSTHAN, INSTANCEOF;
+precedence left PLUS, MINUS;
+precedence left TIMES, DIVIDE;
+precedence right NOT;
+precedence left LPAREN, RPAREN, LSQBR, RSQBR, DOT;
 
 /* Productions: */
 
-Program ::= Statement:s
-            {: List<Statement> p = new LinkedList<Statement>();
-               p.add(s);
-               RESULT = p; :}
-        | Program:p Statement:s
-            {: p.add(s); RESULT = p; :};
+Program     ::= MainClass:am ClassDeclarationList:acl
+            {: RESULT = new Program(am, acl, amxleft); :}
+            ;
 
-Statement   ::= AssignStatement:s
-                {: RESULT = s; :}
-            | DisplayStatement:s
-                {: RESULT = s; :};
+MainClass   ::= CLASS Identifier:i1 LCURBR PUBLIC STATIC VOID MAIN LPAREN STRING LSQBR RSQBR Identifier:i2 RPAREN LCURBR StatementList:sl RCURBR RCURBR
+            {: RESULT = new MainClass(i1, i2, sl, i1xleft); :}
+            ;
 
-AssignStatement ::= Identifier:id BECOMES Expression:expr SEMICOLON
-                    {: RESULT = new Assign(id, expr, idxleft); :};
+ClassDeclaration    ::= CLASS Identifier:i1 EXTENDS Identifier:i2 LCURBR VarDeclarationList:vdl MethodDeclarationList:mdl RCURBR
+                    {: RESULT = new ClassDeclExtends(i1, i2, vdl, mdl , i1xleft); :}
+                    |   CLASS Identifier:i1 LCURBR VarDeclarationList:vdl MethodDeclarationList:mdl RCURBR
+                    {: RESULT = new ClassDeclSimple(i1, vdl, mdl, i1xleft); :}
+                    ;
 
-Identifier  ::= IDENTIFIER:id
-                {: RESULT = new Identifier(id, idxleft); :};
+MethodDeclaration   ::= PUBLIC Type:t Identifier:i LPAREN FormalList:fl RPAREN LCURBR StatementList:sl RETURN Expression:e SEMICOLON RCURBR
+                    {: RESULT = new MethodDecl(t, i, fl, sl, e, txleft); :}
+                    |   PUBLIC Type:t Identifier:i LPAREN RPAREN LCURBR StatementList:sl RETURN Expression:e SEMICOLON RCURBR
+                    {: RESULT = new MethodDecl(t, i, null, sl, e, txleft); :}
+                    ;
 
-DisplayStatement ::= DISPLAY:d Expression:expr SEMICOLON
-                     {: RESULT = new Display(expr, dxleft); :};
+Formal  ::= Type:t Identifier:id
+            {: RESULT = new Formal(t, id, txleft); :}
+        ;
 
-Expression    ::= IDENTIFIER:name
-            {: RESULT = new IdentifierExp(name, namexleft); :}
-        | Expression:arg1 PLUS Expression:arg2
-            {: RESULT = new Plus(arg1, arg2, arg1xleft); :}
-        | LPAREN Expression:expr RPAREN
-            {: RESULT = expr; :};
+FormalList ::= FormalList:fl COMMA Formal:f
+            {: fl.add(f); RESULT = fl; :}
+            |  Formal:f
+            {: RESULT = new FormalList(fxleft); RESULT.add(f); :}
+        ;
+
+ClassDeclarationList ::= ClassDeclarationList:cdl ClassDeclaration:cd
+                        {: cdl.add(cd); RESULT = cdl; :}
+                    |   /* empty identlist*/
+                        {: RESULT = new ClassDeclList(null); :}
+                    ;
+
+IdentifierList  ::= IdentifierList:il COMMA Identifier:i
+                {: il.add(i); RESULT = il; :}
+                |  Identifier:i
+                {: RESULT = new LinkedList<Identifier>(); RESULT.add(i); :}
+                ;
+
+VarDeclaration ::= Type:t IdentifierList:il SEMICOLON
+                {: RESULT = new VarDecl(t, il, txleft); :}
+                ;
+
+VarDeclarationList ::= VarDeclarationList:vdl VarDeclaration:vd
+                        {: vdl.add(vd); RESULT = vdl; :}
+                    |   /* empty decllist */
+                        {: RESULT = new VarDeclList(null); :}
+                    ;
+
+MethodDeclarationList ::= MethodDeclarationList:mdl MethodDeclaration:md
+                        {: mdl.add(md); RESULT = mdl; :}
+                    |      /* empty methodlist */
+                        {: RESULT = new MethodDeclList(null); :}
+                    ;
+
+StatementList ::= StatementList:sl Statement:s
+                {: sl.add(s); RESULT = sl; :}
+                |   /* empty stmtlist */
+                {: RESULT = new StatementList(null); :}
+                ;
+
+Type    ::= INT:ia LSQBR RSQBR
+            {: RESULT = new IntArrayType(iaxleft); :}
+        |   BOOLEAN:bl
+            {: RESULT = new BooleanType(blxleft); :}
+        |   INT:it
+            {: RESULT = new IntegerType(itxleft); :}
+        |   STRING:stra LSQBR RSQBR
+            {: RESULT = new StringArrayType(straxleft); :}
+        |   STRING:str
+            {: RESULT = new StringType(strxleft); :}
+        |   Identifier:i
+            {: RESULT = new IdentifierType(i.toString(), ixleft); :}
+        ;
+
+Statement   ::= LCURBR StatementList:sl RCURBR
+                {: RESULT = new Block(sl, slxleft); :}
+            |   IF LPAREN Expression:e RPAREN Statement:s1 ELSE Statement:s2
+                {: RESULT = new If(e, s1, s2, exleft); :}
+            |   WHILE LPAREN Expression:e RPAREN Statement:s
+                {: RESULT = new While(e, s, exleft); :}
+            |   SYSTEMOUTPRINTLN LPAREN Expression:e RPAREN SEMICOLON
+                {: RESULT = new Print(e, exleft); :}
+            |   Identifier:i BECOMES Expression:e SEMICOLON
+                {: RESULT = new Assign(i, e, ixleft); :}
+            |   Identifier:i LSQBR Expression:e1 RSQBR BECOMES Expression:e2 SEMICOLON
+                {: RESULT = new ArrayAssign(i, e1, e2, ixleft); :}
+            |   VarDeclaration:vd
+                {: RESULT = vd; :}
+            ;
+
+Expression  ::= Expression:e1 AND Expression:e2
+                {: RESULT = new And(e1, e2, e1xleft); :}
+            |   Expression:e1 LESSTHAN Expression:e2
+                {: RESULT = new LessThan(e1, e2, e1xleft); :}
+            |   Expression:e1 PLUS Expression:e2
+                {: RESULT = new Plus(e1, e2, e1xleft); :}
+            |   Expression:e1 MINUS Expression:e2
+                {: RESULT = new Minus(e1, e2, e1xleft); :}
+            |   Expression:e1 TIMES Expression:e2
+                {: RESULT = new Times(e1, e2, e1xleft); :}
+            |   Expression:e1 LSQBR Expression:e2 RSQBR
+                {: RESULT = new ArrayLookup(e1, e2, e1xleft); :}
+            |   Expression:e DOT LENGTH
+                {: RESULT = new ArrayLength(e, exleft); :}
+            |   Expression:e DOT Identifier:i LPAREN ExpressionList:el RPAREN
+                {: RESULT = new Call(e, i, el, exleft); :}
+            |   Expression:e DOT Identifier:i LPAREN RPAREN
+                {: RESULT = new Call(e, i, null, exleft); :}
+            |   INTEGERCONST:i
+                {: RESULT = new IntegerLiteral(i, ixleft); :}
+            |   TRUE:t
+                {: RESULT = new True(txleft); :}
+            |   FALSE:f
+                {: RESULT = new False(fxleft); :}
+            |   IDENTIFIER:i
+                {: RESULT = new IdentifierExp(i, ixleft); :}
+            |   THIS:t
+                {: RESULT = new This(txleft); :}
+            |   NEW INT LSQBR Expression:e RSQBR
+                {: RESULT = new NewArray(e, exleft); :}
+            |   NEW Identifier:i LPAREN RPAREN
+                {: RESULT = new NewObject(i, ixleft); :}
+            |   NOT Expression:e
+                {: RESULT = new Not(e, exleft); :}
+            |   LPAREN Expression:e RPAREN
+                {: RESULT = e; :}
+            ;
+
+ExpressionList ::= ExpressionList:el COMMA Expression:e
+                {: el.add(e); RESULT = el; :}
+            |   Expression:e
+                {: RESULT = new ExpList(exleft); RESULT.add(e); :}
+            ;
+
+Identifier  ::= IDENTIFIER:i
+            {: RESULT = new Identifier(i, ixleft); :}
+            ;

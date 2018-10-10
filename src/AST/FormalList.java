@@ -1,7 +1,7 @@
 package AST;
 
 import java.util.List;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java_cup.runtime.ComplexSymbolFactory.Location;
 
 public class FormalList extends ASTNode {
@@ -9,7 +9,7 @@ public class FormalList extends ASTNode {
 
    public FormalList(Location pos) {
       super(pos);
-      list = new ArrayList<Formal>();
+      list = new LinkedList<Formal>();
    }
 
    public void add(Formal n) {

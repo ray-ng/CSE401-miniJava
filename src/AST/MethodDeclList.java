@@ -1,7 +1,7 @@
 package AST;
 
 import java.util.List;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java_cup.runtime.ComplexSymbolFactory.Location;
 
 public class MethodDeclList extends ASTNode {
@@ -9,7 +9,7 @@ public class MethodDeclList extends ASTNode {
 
    public MethodDeclList(Location pos) {
       super(pos);
-      list = new ArrayList<MethodDecl>();
+      list = new LinkedList<MethodDecl>();
    }
 
    public void add(MethodDecl n) {

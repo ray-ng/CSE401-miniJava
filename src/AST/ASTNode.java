@@ -9,6 +9,10 @@ abstract public class ASTNode {
 
   // Constructor
   public ASTNode(Location pos) {
-    this.line_number = pos.getLine();
+    if (pos != null) {
+      this.line_number = pos.getLine();
+    } else {
+      line_number = 0;
+    }
   }
 }

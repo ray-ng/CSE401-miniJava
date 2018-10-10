@@ -8,11 +8,11 @@ import AST.*;
 public class PrettyPrintVisitor implements Visitor {
 
   // Display added for toy example language.  Not used in regular MiniJava
-  public void visit(Display n) {
-    System.out.print("display ");
-    n.e.accept(this);
-    System.out.print(";");
-  }
+//  public void visit(Display n) {
+//    System.out.print("display ");
+//    n.e.accept(this);
+//    System.out.print(";");
+//  }
   
   // MainClass m;
   // ClassDeclList cl;
@@ -30,11 +30,15 @@ public class PrettyPrintVisitor implements Visitor {
     System.out.print("class ");
     n.i1.accept(this);
     System.out.println(" {");
-    System.out.print("  public static void main (String [] ");
+    System.out.print("  public static void main (String[] ");
     n.i2.accept(this);
     System.out.println(") {");
-    System.out.print("    ");
-    n.s.accept(this);
+//    System.out.print("    ");
+    for ( int i = 0; i < n.sl.size(); i++ ) {
+      System.out.print("    ");
+      n.sl.get(i).accept(this);
+      if ( i < n.sl.size() ) { System.out.println(); }
+    }
     System.out.println("  }");
     System.out.println("}");
   }
@@ -49,13 +53,15 @@ public class PrettyPrintVisitor implements Visitor {
     for ( int i = 0; i < n.vl.size(); i++ ) {
         System.out.print("  ");
         n.vl.get(i).accept(this);
-        if ( i+1 < n.vl.size() ) { System.out.println(); }
+//        if ( i+1 < n.vl.size() ) { System.out.println(); }
+      System.out.println();
     }
     for ( int i = 0; i < n.ml.size(); i++ ) {
-        System.out.println();
+//        System.out.println();
         n.ml.get(i).accept(this);
+      System.out.println();
     }
-    System.out.println();
+//    System.out.println();
     System.out.println("}");
   }
  
@@ -87,7 +93,10 @@ public class PrettyPrintVisitor implements Visitor {
   public void visit(VarDecl n) {
     n.t.accept(this);
     System.out.print(" ");
-    n.i.accept(this);
+    for (Identifier i: n.il) {
+        i.accept(this);
+    }
+//    n.il.accept(this);
     System.out.print(";");
   }
 
@@ -103,20 +112,24 @@ public class PrettyPrintVisitor implements Visitor {
     System.out.print(" ");
     n.i.accept(this);
     System.out.print(" (");
-    for ( int i = 0; i < n.fl.size(); i++ ) {
+    if (n.fl != null) {
+      for (int i = 0; i < n.fl.size(); i++) {
         n.fl.get(i).accept(this);
-        if (i+1 < n.fl.size()) { System.out.print(", "); }
+        if (i + 1 < n.fl.size()) {
+          System.out.print(", ");
+        }
+      }
     }
     System.out.println(") { ");
-    for ( int i = 0; i < n.vl.size(); i++ ) {
-        System.out.print("    ");
-        n.vl.get(i).accept(this);
-        System.out.println("");
-    }
+//    for ( int i = 0; i < n.vl.size(); i++ ) {
+//        System.out.print("    ");
+//        n.vl.get(i).accept(this);
+//        System.out.println("");
+//    }
     for ( int i = 0; i < n.sl.size(); i++ ) {
         System.out.print("    ");
         n.sl.get(i).accept(this);
-        if ( i < n.sl.size() ) { System.out.println(""); }
+        if ( i < n.sl.size() ) { System.out.println(); }
     }
     System.out.print("    return ");
     n.e.accept(this);
@@ -187,6 +200,7 @@ public class PrettyPrintVisitor implements Visitor {
     System.out.print("System.out.println(");
     n.e.accept(this);
     System.out.print(");");
+//    System.out.println();
   }
   
   // Identifier i;
@@ -276,9 +290,13 @@ public class PrettyPrintVisitor implements Visitor {
     System.out.print(".");
     n.i.accept(this);
     System.out.print("(");
-    for ( int i = 0; i < n.el.size(); i++ ) {
+    if (n.el != null) {
+      for (int i = 0; i < n.el.size(); i++) {
         n.el.get(i).accept(this);
-        if ( i+1 < n.el.size() ) { System.out.print(", "); }
+        if (i + 1 < n.el.size()) {
+          System.out.print(", ");
+        }
+      }
     }
     System.out.print(")");
   }
@@ -329,4 +347,20 @@ public class PrettyPrintVisitor implements Visitor {
   public void visit(Identifier n) {
     System.out.print(n.s);
   }
+
+  public void visit(StringType n) {
+    System.out.print("String");
+  }
+
+  public void visit(StringArrayType n) {
+    System.out.print("String []");
+  }
+
+  public void visit(StatementList sl) {
+      int slsize = sl.size();
+      for (int i = 0; i < slsize; ++i) {
+          sl.get(i).accept(this);
+      }
+  }
+
 }

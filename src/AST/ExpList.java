@@ -1,7 +1,7 @@
 package AST;
 
 import java.util.List;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java_cup.runtime.ComplexSymbolFactory.Location;
 
 public class ExpList extends ASTNode{
@@ -9,7 +9,7 @@ public class ExpList extends ASTNode{
 
    public ExpList(Location pos) {
       super(pos);
-      list = new ArrayList<Exp>();
+      list = new LinkedList<Exp>();
    }
 
    public void add(Exp n) {

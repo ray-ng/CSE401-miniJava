@@ -19,11 +19,13 @@ public class TestParser {
 	    // replace p.parse() with p.debug_parse() in next line to see trace of
 	    // parser shift/reduce actions during parse
             root = p.parse();
-            List<Statement> program = (List<Statement>)root.value;
-            for (Statement statement: program) {
-                statement.accept(new PrettyPrintVisitor());
-                System.out.print("\n");
-            }
+//            List<Statement> program = (List<Statement>)root.value;
+//            for (Statement statement: program) {
+//                statement.accept(new PrettyPrintVisitor());
+//                System.out.print("\n");
+//            }
+            Program program = (Program)root.value;
+            program.accept(new PrettyPrintVisitor());
             System.out.print("\nParsing completed"); 
         } catch (Exception e) {
             // yuck: some kind of error in the compiler implementation

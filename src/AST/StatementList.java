@@ -1,7 +1,9 @@
 package AST;
 
 import java.util.List;
-import java.util.ArrayList;
+import java.util.LinkedList;
+
+import AST.Visitor.Visitor;
 import java_cup.runtime.ComplexSymbolFactory.Location;
 
 public class StatementList extends ASTNode {
@@ -9,7 +11,7 @@ public class StatementList extends ASTNode {
 
    public StatementList(Location pos) {
       super(pos);
-      list = new ArrayList<Statement>();
+      list = new LinkedList<Statement>();
    }
 
    public void add(Statement n) {
@@ -22,5 +24,9 @@ public class StatementList extends ASTNode {
 
    public int size() { 
       return list.size(); 
+   }
+
+   public void accept(Visitor v) {
+      v.visit(this);
    }
 }

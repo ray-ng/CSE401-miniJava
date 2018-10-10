@@ -8,7 +8,7 @@ public class IntegerLiteral extends Exp {
 
   public IntegerLiteral(int ai, Location pos) {
     super(pos);
-    i=ai;
+    i = ai;
   }
 
   public void accept(Visitor v) {
